@@ -2,5 +2,5 @@
   { "rut": "12345678", "habilitado": true },
   { "rut": "87654321", "habilitado": false },
   { "rut": "22222222", "habilitado": true },
-  { "rut": "171886082", "habilitado": false }
+  { "rut": "171886082", "habilitado": true }
 ]
