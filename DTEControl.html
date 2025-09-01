@@ -3,104 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DTE Control by Excelera - Automatiza la Gestión del SII en Excel</title>
+    
+    <title>Aceptación y Reclamo Masivo DTE en Excel | Conector SII | Excelera</title>
+    
+    <meta name="description" content="Ahorra horas en la gestión de facturación electrónica en Chile. Acepta o reclama cientos de DTE del SII masivamente desde Excel. Ideal para tesorería. ¡Descarga la demo!">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Excelera - Conector SII para Excel (DTE Control)",
+      "description": "Software para Excel que automatiza la aceptación y reclamo masivo de Documentos Tributarios Electrónicos (DTE) ante el SII en Chile. Optimiza el trabajo de tesorería y cuentas por pagar.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows",
+      "offers": {
+        "@type": "Offer",
+        "price": "30000",
+        "priceCurrency": "CLP",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Excelera"
+        }
+      },
+      "keywords": "aceptacion dte, reclamar factura sii, facturacion electronica chile, conector sii excel"
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F9FA; /* Un fondo ligeramente gris para que resalten los elementos blancos */
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
-        }
-        .neobrutalism-box {
-            border: 3px solid #111827;
-            box-shadow: 6px 6px 0px #111827;
-        }
-        .neobrutalism-button {
-            border: 3px solid #111827;
-            box-shadow: 4px 4px 0px #111827;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .neobrutalism-button:hover, .neobrutalism-button:focus {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0px #111827;
-        }
-        .neobrutalism-card {
-            border: 3px solid #111827;
-            box-shadow: 6px 6px 0px #111827;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .neobrutalism-card:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 4px 4px 0px #111827;
-        }
-        .fade-in-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Estilos para el acordeón de FAQ */
-        .faq-question.active .arrow-down {
-            transform: rotate(180deg);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+        .neobrutalism-box { border: 3px solid #111827; box-shadow: 6px 6px 0px #111827; }
+        .neobrutalism-button { border: 3px solid #111827; box-shadow: 4px 4px 0px #111827; transition: transform 0.2s, box-shadow 0.2s; }
+        .neobrutalism-button:hover, .neobrutalism-button:focus { transform: translate(2px, 2px); box-shadow: 2px 2px 0px #111827; }
+        .neobrutalism-card { border: 3px solid #111827; box-shadow: 6px 6px 0px #111827; transition: transform 0.2s, box-shadow 0.2s; }
+        .neobrutalism-card:hover { transform: translate(2px, 2px); box-shadow: 4px 4px 0px #111827; }
+        .fade-in-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+        .faq-question.active .arrow-down { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; }
     </style>
 </head>
 <body class="text-gray-900">
 
-    <!-- Header y Navegación -->
     <header class="bg-white sticky top-0 z-50 border-b-4 border-gray-900">
         <nav class="container mx-auto flex items-center justify-between p-4">
-            <a href="#" class="text-2xl font-extrabold text-black">
-                EXCELERA
-            </a>
+            <a href="#" class="text-2xl font-extrabold text-black">EXCELERA</a>
             <div class="hidden md:flex items-center space-x-8 font-semibold">
                 <a href="#caracteristicas" class="hover:text-[#ED7D31] transition-colors">Características</a>
                 <a href="#precios" class="hover:text-[#ED7D31] transition-colors">Precios</a>
                 <a href="#faq" class="hover:text-[#ED7D31] transition-colors">Ayuda</a>
             </div>
-            <a href="#precios" class="bg-[#ED7D31] text-gray-900 font-bold py-3 px-6 neobrutalism-button">
-                Prueba Gratis
-            </a>
+            <a href="#precios" class="bg-[#ED7D31] text-gray-900 font-bold py-3 px-6 neobrutalism-button">Prueba Gratis</a>
         </nav>
     </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Sección Principal (Hero) -->
         <section class="py-20 md:py-24">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="text-center md:text-left">
                     <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900">
-                        DTE Control: La gestión del SII, <span class="text-[#ED7D31]">directo en tu Excel.</span>
+                        Automatiza la Aceptación y Reclamo de Facturas del SII, <span class="text-[#ED7D31]">directo en Excel.</span>
                     </h1>
                     <p class="mt-6 text-lg md:text-xl text-gray-600">
-                        La herramienta de alto valor y rápida implementación para gestionar tus DTEs. Ahorra tiempo y dinero sin salir de la planilla que ya conoces.
+                        Con DTE Control, transforma tu planilla en el centro de control para la gestión masiva de Documentos Tributarios Electrónicos (DTE) en Chile. Ahorra tiempo, evita errores y toma el control.
                     </p>
                     <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                         <a href="#precios" class="bg-[#ED7D31] text-gray-900 font-bold text-lg py-4 px-8 neobrutalism-button w-full sm:w-auto text-center">
-                            Descargar Prueba de 15 Días
-                        </a>
-                         <a href="#caracteristicas" class="bg-gray-900 text-white font-bold text-lg py-4 px-8 neobrutalism-button w-full sm:w-auto text-center">
-                            Ver Características
-                        </a>
+                        <a href="#precios" class="bg-[#ED7D31] text-gray-900 font-bold text-lg py-4 px-8 neobrutalism-button w-full sm:w-auto text-center">Descargar Prueba de 15 Días</a>
+                        <a href="#caracteristicas" class="bg-gray-900 text-white font-bold text-lg py-4 px-8 neobrutalism-button w-full sm:w-auto text-center">Ver Características</a>
                     </div>
                 </div>
                 <div class="neobrutalism-box bg-white p-2">
-                    <!-- SVG Ilustrativo -->
                     <div class="w-full h-80 md:h-96 bg-gray-100 flex items-center justify-center p-4 border-2 border-gray-900">
-                        <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                        <svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="svg-title-desc">
+                            <title id="svg-title-desc">Ilustración de la automatización de facturas en Excel con el conector SII de Excelera.</title>
                             <rect x="20" y="40" width="360" height="220" rx="10" fill="#E5E7EB"/>
                             <rect x="20" y="40" width="360" height="40" rx="10" ry="10" fill="#4B5563"/>
                             <circle cx="40" cy="60" r="8" fill="#F87171"/>
@@ -124,104 +104,82 @@
             </div>
         </section>
         
-        <!-- Sección de Características -->
+        <section class="my-16 md:my-24 text-center fade-in-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">¿Cansado de gestionar facturas una por una en el SII?</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                El proceso manual de aceptar o reclamar DTE es lento, repetitivo y propenso a errores. Tu tiempo es demasiado valioso para perderlo en tareas que puedes automatizar.
+            </p>
+        </section>
+
         <section id="caracteristicas" class="my-16 md:my-24 fade-in-on-scroll bg-white neobrutalism-box rounded-2xl p-8 md:p-12">
             <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                    Funcionalidades diseñadas para tu éxito
-                </h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Funcionalidades Clave del Conector Excelera</h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Cada característica está pensada para ahorrarte tiempo, minimizar errores y darte el control total sobre la gestión de DTEs.
+                    Cada característica está pensada para ahorrarte tiempo, minimizar errores y darte el control total sobre la gestión masiva de DTEs.
                 </p>
             </div>
             <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Característica 1: Ahorro de Tiempo -->
-                <div class="bg-white p-8 neobrutalism-card text-center">
-                    <div class="flex justify-center items-center h-16 w-16 bg-[#ED7D31]/20 rounded-xl mx-auto border-2 border-gray-900">
-                        <svg class="h-8 w-8 text-[#ED7D31]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mt-6">Ahorro de Tiempo Masivo</h3>
-                    <p class="mt-2 text-gray-600">
-                        Realiza consultas y acciones de forma masiva en segundos, eliminando horas de trabajo manual.
-                    </p>
-                </div>
-                <!-- Característica 2: Consultas SII -->
-                <div class="bg-white p-8 neobrutalism-card text-center">
-                    <div class="flex justify-center items-center h-16 w-16 bg-[#ED7D31]/20 rounded-xl mx-auto border-2 border-gray-900">
-                         <svg class="h-8 w-8 text-[#ED7D31]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mt-6">Consultas Directas al SII</h3>
-                    <p class="mt-2 text-gray-600">
-                        Consulta el historial de eventos, la información de cesión y la fecha de recepción de DTEs.
-                    </p>
-                </div>
-                <!-- Característica 3: Gestión Eventos -->
                 <div class="bg-white p-8 neobrutalism-card text-center">
                     <div class="flex justify-center items-center h-16 w-16 bg-[#ED7D31]/20 rounded-xl mx-auto border-2 border-gray-900">
                         <svg class="h-8 w-8 text-[#ED7D31]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mt-6">Gestión de Eventos en Excel</h3>
-                    <p class="mt-2 text-gray-600">
-                        Registra masivamente la aceptación, el reclamo o el acuse de recibo de documentos desde tu planilla.
-                    </p>
+                    <h3 class="text-2xl font-bold mt-6">Aceptación y Reclamo Masivo</h3>
+                    <p class="mt-2 text-gray-600">Envía eventos de 'Aceptación de Contenido' (ACD) o 'Reclamo' (RCD) para cientos de facturas con un solo clic.</p>
                 </div>
-                 <!-- Característica 4: Nómina Segura -->
+                <div class="bg-white p-8 neobrutalism-card text-center">
+                    <div class="flex justify-center items-center h-16 w-16 bg-[#ED7D31]/20 rounded-xl mx-auto border-2 border-gray-900">
+                        <svg class="h-8 w-8 text-[#ED7D31]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mt-6">Consulta Historial de Eventos</h3>
+                    <p class="mt-2 text-gray-600">Verifica el estado de tus DTE directamente en tu planilla, sin necesidad de entrar al portal del SII.</p>
+                </div>
                 <div class="bg-white p-8 neobrutalism-card text-center">
                     <div class="flex justify-center items-center h-16 w-16 bg-[#ED7D31]/20 rounded-xl mx-auto border-2 border-gray-900">
                         <svg class="h-8 w-8 text-[#ED7D31]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.944a11.955 11.955 0 0118-8.944c0-1.246-.212-2.457-.618-3.618z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mt-6">Nómina de Pagos Segura</h3>
-                    <p class="mt-2 text-gray-600">
-                        Revisa tu nómina en minutos y asegura no pagar documentos cedidos, rechazados o anulados.
-                    </p>
+                    <h3 class="text-2xl font-bold mt-6">Otorgar Recibo de Mercaderías</h3>
+                    <p class="mt-2 text-gray-600">Gestiona el recibo de mercaderías (ERM) para múltiples documentos de forma automática y segura.</p>
                 </div>
-                 <!-- Característica 5: Uso Intuitivo -->
+                <div class="bg-white p-8 neobrutalism-card text-center">
+                     <div class="flex justify-center items-center h-16 w-16 bg-[#ED7D31]/20 rounded-xl mx-auto border-2 border-gray-900">
+                        <svg class="h-8 w-8 text-[#ED7D31]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mt-6">Validación Masiva de RUTs</h3>
+                    <p class="mt-2 text-gray-600">Valida y formatea RUTs directamente en Excel para asegurar la calidad de tus datos de proveedores.</p>
+                </div>
                 <div class="bg-white p-8 neobrutalism-card text-center">
                     <div class="flex justify-center items-center h-16 w-16 bg-[#ED7D31]/20 rounded-xl mx-auto border-2 border-gray-900">
                         <svg class="h-8 w-8 text-[#ED7D31]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mt-6">Uso Intuitivo e Instalación Automática</h3>
-                    <p class="mt-2 text-gray-600">
-                        Comienza a trabajar de inmediato con un instalador automático y una interfaz de usuario simple y clara.
-                    </p>
+                    <h3 class="text-2xl font-bold mt-6">Instalación Automática</h3>
+                    <p class="mt-2 text-gray-600">Comienza a trabajar de inmediato con un instalador y una interfaz de usuario simple y clara.</p>
                 </div>
-                 <!-- Característica 6: Validación RUTs -->
                 <div class="bg-white p-8 neobrutalism-card text-center">
                     <div class="flex justify-center items-center h-16 w-16 bg-[#ED7D31]/20 rounded-xl mx-auto border-2 border-gray-900">
-                        <svg class="h-8 w-8 text-[#ED7D31]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <svg class="h-8 w-8 text-[#ED7D31]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mt-6">Validación de RUTs Masiva</h3>
-                    <p class="mt-2 text-gray-600">
-                        Valida el dígito verificador de RUTs masivamente en tu hoja de Excel, sin recurrir a webs tediosas.
-                    </p>
+                    <h3 class="text-2xl font-bold mt-6">Ahorro de Tiempo Garantizado</h3>
+                    <p class="mt-2 text-gray-600">Realiza consultas y acciones de forma masiva en segundos, eliminando horas de trabajo manual.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Nueva Sección: Cómo Funciona -->
         <section class="py-16 md:py-24 fade-in-on-scroll">
             <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                    Tan fácil como contar hasta 3
-                </h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Empieza a automatizar tu gestión en minutos.
-                </p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Tan fácil como contar hasta 3</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Empieza a automatizar tu gestión en minutos.</p>
             </div>
             <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <!-- Paso 1 -->
                 <div class="p-6">
                     <div class="text-4xl font-black text-[#5B9BD5]">01</div>
                     <h3 class="text-2xl font-bold mt-4">Instala el Add-in</h3>
                     <p class="mt-2 text-gray-600">Nuestro instalador automático deja el complemento listo para usar en tu Excel.</p>
                 </div>
-                <!-- Paso 2 -->
                 <div class="p-6">
                     <div class="text-4xl font-black text-[#5B9BD5]">02</div>
                     <h3 class="text-2xl font-bold mt-4">Prepara tu Planilla</h3>
-                    <p class="mt-2 text-gray-600">Solo necesitas una columna con el RUT del emisor, tipo de DTE y el folio.</p>
+                    <p class="mt-2 text-gray-600">Solo necesitas columnas con el RUT del emisor, tipo de DTE y el folio.</p>
                 </div>
-                <!-- Paso 3 -->
                 <div class="p-6">
                     <div class="text-4xl font-black text-[#5B9BD5]">03</div>
                     <h3 class="text-2xl font-bold mt-4">Ejecuta y Ahorra</h3>
@@ -230,128 +188,95 @@
             </div>
         </section>
 
-
-        <!-- Sección de Precios -->
         <section id="precios" class="py-16 md:pt-0 md:pb-24 fade-in-on-scroll">
-            <div class="text-center">
-                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                    Un precio simple para un poder inmenso
-                </h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Elige el plan que se adapte a tu ritmo de trabajo. Comienza gratis por 15 días.
-                </p>
+             <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Un precio simple para un poder inmenso</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Elige el plan que se adapte a tu ritmo de trabajo. Comienza gratis por 15 días.</p>
             </div>
             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Plan Mensual -->
                 <div class="bg-white p-8 neobrutalism-card flex flex-col">
                     <h3 class="text-2xl font-extrabold text-gray-900">Plan Mensual</h3>
                     <p class="mt-2 text-gray-600">Ideal para empezar sin compromisos a largo plazo.</p>
                     <div class="my-8">
                         <span class="text-5xl font-extrabold text-gray-900">30.000</span>
-                        <span class="text-lg text-gray-500">CLP /mes</span>
+                        <span class="text-lg text-gray-500">CLP /mes + IVA</span>
                     </div>
                     <ul class="space-y-3 text-gray-700 mb-8 flex-grow">
                         <li class="flex items-center"><svg class="w-5 h-5 text-[#70AD47] mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 1 Usuario</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-[#70AD47] mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Consultas ilimitadas</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-[#70AD47] mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Soporte por email</li>
                     </ul>
-                    <a href="#" class="mt-auto block bg-gray-900 text-white font-bold py-3 px-8 text-center neobrutalism-button">
-                        Comenzar Ahora
-                    </a>
+                    <a href="#" class="mt-auto block bg-gray-900 text-white font-bold py-3 px-8 text-center neobrutalism-button">Comenzar Ahora</a>
                 </div>
-
-                <!-- Plan Anual -->
                 <div class="bg-white p-8 neobrutalism-card flex flex-col border-[#4472C4] relative">
-                     <div class="absolute top-0 -right-1 bg-[#FFC000] text-gray-900 font-bold text-sm px-4 py-1 neobrutalism-button" style="transform: rotate(10deg);">
-                        MÁS POPULAR
-                    </div>
+                    <div class="absolute top-0 -right-1 bg-[#FFC000] text-gray-900 font-bold text-sm px-4 py-1 neobrutalism-button" style="transform: rotate(10deg);">MÁS POPULAR</div>
                     <h3 class="text-2xl font-extrabold text-gray-900">Plan Anual</h3>
-                    <p class="mt-2 text-gray-600">Ahorra un 17% y olvídate de los pagos mensuales.</p>
-                     <div class="my-8">
+                    <p class="mt-2 text-gray-600">Ahorra un 17% (2 meses gratis) y olvídate de pagos mensuales.</p>
+                    <div class="my-8">
                         <span class="text-5xl font-extrabold text-gray-900">300.000</span>
-                        <span class="text-lg text-gray-500">CLP /año</span>
+                        <span class="text-lg text-gray-500">CLP /año + IVA</span>
                     </div>
-                     <ul class="space-y-3 text-gray-700 mb-8 flex-grow">
+                    <ul class="space-y-3 text-gray-700 mb-8 flex-grow">
                         <li class="flex items-center"><svg class="w-5 h-5 text-[#70AD47] mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> 1 Usuario</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-[#70AD47] mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Consultas ilimitadas</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-[#70AD47] mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Soporte prioritario</li>
                     </ul>
-                    <a href="#" class="mt-auto block bg-[#ED7D31] text-gray-900 font-bold py-3 px-8 text-center neobrutalism-button">
-                        Obtener Ahorro Anual
-                    </a>
+                    <a href="#" class="mt-auto block bg-[#ED7D31] text-gray-900 font-bold py-3 px-8 text-center neobrutalism-button">Obtener Ahorro Anual</a>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de FAQ -->
         <section id="faq" class="py-16 md:py-24 fade-in-on-scroll">
             <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-                    Preguntas Frecuentes
-                </h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Resolvemos tus dudas para que empieces con total confianza.
-                </p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Preguntas Frecuentes</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Resolvemos tus dudas para que empieces con total confianza.</p>
             </div>
             <div class="mt-12 max-w-3xl mx-auto space-y-4">
-                <!-- FAQ Item 1 -->
                 <div class="bg-white neobrutalism-card">
                     <button class="faq-question w-full flex justify-between items-center text-left p-6">
                         <h3 class="text-xl font-bold text-gray-900">¿Necesito un certificado digital para usar el complemento?</h3>
                         <svg class="arrow-down w-6 h-6 text-gray-900 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" /></svg>
                     </button>
                     <div class="faq-answer px-6 pb-6">
-                        <p class="text-gray-600">Sí, es indispensable contar con un certificado digital A1 válido (el archivo .pfx), emitido por una autoridad reconocida en Chile, para interactuar con los servicios del SII de forma segura.</p>
+                        <p class="text-gray-600">Sí, es indispensable contar con un certificado digital (archivo .pfx) para firmar las peticiones al SII. La herramienta te permite seleccionarlo de forma segura desde tu computador.</p>
                     </div>
                 </div>
-                 <!-- FAQ Item 2 -->
                 <div class="bg-white neobrutalism-card">
                     <button class="faq-question w-full flex justify-between items-center text-left p-6">
                         <h3 class="text-xl font-bold text-gray-900">¿Con qué versiones de Excel es compatible?</h3>
-                         <svg class="arrow-down w-6 h-6 text-gray-900 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" /></svg>
+                        <svg class="arrow-down w-6 h-6 text-gray-900 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" /></svg>
                     </button>
                     <div class="faq-answer px-6 pb-6">
-                        <p class="text-gray-600">El complemento es compatible con Microsoft Excel 2013, 2016, 2019 y Microsoft 365, exclusivamente en sistemas operativos Windows. Aún no es compatible con MacOS.</p>
+                        <p class="text-gray-600">El complemento es compatible con Microsoft Excel 2013 en adelante (incluyendo Microsoft 365), exclusivamente en sistemas operativos Windows. No es compatible con MacOS.</p>
                     </div>
                 </div>
-                 <!-- FAQ Item 3 -->
                 <div class="bg-white neobrutalism-card">
                     <button class="faq-question w-full flex justify-between items-center text-left p-6">
                         <h3 class="text-xl font-bold text-gray-900">¿Mis datos están seguros?</h3>
-                         <svg class="arrow-down w-6 h-6 text-gray-900 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" /></svg>
+                        <svg class="arrow-down w-6 h-6 text-gray-900 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" /></svg>
                     </button>
                     <div class="faq-answer px-6 pb-6">
-                        <p class="text-gray-600">Absolutamente. Tu certificado digital y la información de tus DTEs se procesan de forma local en tu computador. El complemento solo se comunica directamente con el SII para realizar las consultas. Nosotros no tenemos acceso a tus datos.</p>
+                        <p class="text-gray-600">Absolutamente. Tu certificado digital y la información de tus DTEs se procesan de forma local en tu computador. El complemento solo se comunica directamente con los servidores del SII. Nosotros nunca tenemos acceso a tus datos.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Final -->
         <section class="bg-[#4472C4] py-16 md:py-20 my-16 neobrutalism-box fade-in-on-scroll">
             <div class="text-center px-6">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white">
-                    Simplifica tu gestión de DTEs, para siempre.
-                </h2>
-                <p class="mt-4 text-xl text-gray-100 max-w-2xl mx-auto">
-                    Únete a los profesionales que ya no pierden el tiempo con tareas repetitivas. Descarga tu prueba gratis y siente la diferencia.
-                </p>
-                <a href="#precios" class="mt-8 inline-block bg-[#ED7D31] text-gray-900 font-bold text-lg py-4 px-8 neobrutalism-button">
-                    Descargar Prueba Gratis por 15 Días
-                </a>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Simplifica tu gestión de DTEs, para siempre.</h2>
+                <p class="mt-4 text-xl text-gray-100 max-w-2xl mx-auto">Únete a los profesionales que ya no pierden el tiempo con tareas repetitivas. Descarga tu prueba gratis y siente la diferencia.</p>
+                <a href="#precios" class="mt-8 inline-block bg-[#ED7D31] text-gray-900 font-bold text-lg py-4 px-8 neobrutalism-button">Descargar Prueba Gratis por 15 Días</a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6 text-center md:text-left">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h4 class="text-2xl font-extrabold">EXCELERA</h4>
-                    <p class="mt-4 text-gray-400 text-sm">
-                        Creamos herramientas y proyectos de fácil y rápida implementación, ofreciendo un alto valor a bajo costo para nuestros clientes.
-                    </p>
+                    <p class="mt-4 text-gray-400 text-sm">Creamos herramientas de alto valor y rápida implementación para automatizar procesos de negocio en Chile.</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold">Navegación</h4>
@@ -359,14 +284,11 @@
                         <li><a href="#caracteristicas" class="text-gray-400 hover:text-white transition">Características</a></li>
                         <li><a href="#precios" class="text-gray-400 hover:text-white transition">Precios</a></li>
                         <li><a href="#faq" class="text-gray-400 hover:text-white transition">Ayuda</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contacto</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold">Contacto</h4>
-                    <p class="mt-4 text-gray-400 text-sm">
-                        Email: contacto@excelera.cl<br>
-                    </p>
+                    <p class="mt-4 text-gray-400 text-sm">Email: contacto@excelera.tech</p>
                 </div>
             </div>
             <div class="mt-10 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
@@ -375,10 +297,8 @@
         </div>
     </footer>
     
-    <!-- JavaScript para animaciones e interactividad -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Animaciones de scroll
             const sections = document.querySelectorAll(".fade-in-on-scroll");
             const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
             const observer = new IntersectionObserver((entries, observer) => {
@@ -391,20 +311,15 @@
             }, observerOptions);
             sections.forEach(section => observer.observe(section));
 
-            // Lógica del acordeón para FAQ
             const faqQuestions = document.querySelectorAll(".faq-question");
             faqQuestions.forEach(question => {
                 question.addEventListener("click", () => {
                     const answer = question.nextElementSibling;
                     const isActive = question.classList.contains("active");
-
-                    // Cerrar todas las respuestas abiertas
                     document.querySelectorAll('.faq-question').forEach(q => {
                         q.classList.remove('active');
                         q.nextElementSibling.style.maxHeight = null;
                     });
-                    
-                    // Abrir la respuesta actual si no estaba activa
                     if (!isActive) {
                         question.classList.add("active");
                         answer.style.maxHeight = answer.scrollHeight + "px";
@@ -415,12 +330,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
