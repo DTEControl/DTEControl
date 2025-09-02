@@ -3,76 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Título Principal -->
     <title>DTE Control by Excelera - Automatiza la Gestión del SII en Excel</title>
+
+    <!-- SEO: Meta Descripción (esencial para los resultados de búsqueda) -->
+    <meta name="description" content="Ahorra horas en la gestión de facturación electrónica en Chile. Acepta o reclama cientos de DTE del SII masivamente desde Excel. Ideal para tesorería. ¡Descarga la demo!">
+
+    <!-- SEO: URL Canónica para evitar contenido duplicado -->
+    <link rel="canonical" href="https://excelera.tech/">
+
+    <!-- SEO: Meta Tags para Redes Sociales (Open Graph para WhatsApp, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://excelera.tech/">
+    <meta property="og:title" content="Aceptación y Reclamo Masivo DTE en Excel | Conector SII | Excelera">
+    <meta property="og:description" content="Ahorra horas en la gestión de facturación electrónica en Chile. Acepta o reclama cientos de DTE del SII masivamente desde Excel.">
+    <!-- IMPORTANTE: Crea una imagen de 1200x630px, súbela a tu proyecto y reemplaza la URL de abajo -->
+    <meta property="og:image" content="https://excelera.tech/imagen-social.jpg">
+
+    <!-- SEO: Meta Tags para Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://excelera.tech/">
+    <meta name="twitter:title" content="Aceptación y Reclamo Masivo DTE en Excel | Conector SII | Excelera">
+    <meta name="twitter:description" content="Ahorra horas en la gestión de facturación electrónica en Chile. Acepta o reclama cientos de DTE del SII masivamente desde Excel.">
+    <!-- IMPORTANTE: Usa la misma imagen que en Open Graph -->
+    <meta name="twitter:image" content="https://excelera.tech/imagen-social.jpg">
+    
+    <!-- SEO: Datos Estructurados (JSON-LD) para que Google entienda tu producto -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DTE Control by Excelera",
+      "description": "Software para Excel que automatiza la aceptación y reclamo masivo de Documentos Tributarios Electrónicos (DTE) ante el SII en Chile.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows",
+      "offers": {
+        "@type": "Offer",
+        "price": "30000",
+        "priceCurrency": "CLP",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Excelera"
+        }
+      },
+      "keywords": "aceptacion dte, reclamar factura sii, facturacion electronica chile, conector sii excel"
+    }
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F9FA; /* Un fondo ligeramente gris para que resalten los elementos blancos */
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
-        }
-        .neobrutalism-box {
-            border: 3px solid #111827;
-            box-shadow: 6px 6px 0px #111827;
-        }
-        .neobrutalism-button {
-            border: 3px solid #111827;
-            box-shadow: 4px 4px 0px #111827;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .neobrutalism-button:hover, .neobrutalism-button:focus {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0px #111827;
-        }
-        .neobrutalism-card {
-            border: 3px solid #111827;
-            box-shadow: 6px 6px 0px #111827;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .neobrutalism-card:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 4px 4px 0px #111827;
-        }
-        .fade-in-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Estilos para el acordeón de FAQ */
-        .faq-question.active .arrow-down {
-            transform: rotate(180deg);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+        .neobrutalism-box { border: 3px solid #111827; box-shadow: 6px 6px 0px #111827; }
+        .neobrutalism-button { border: 3px solid #111827; box-shadow: 4px 4px 0px #111827; transition: transform 0.2s, box-shadow 0.2s; }
+        .neobrutalism-button:hover, .neobrutalism-button:focus { transform: translate(2px, 2px); box-shadow: 2px 2px 0px #111827; }
+        .neobrutalism-card { border: 3px solid #111827; box-shadow: 6px 6px 0px #111827; transition: transform 0.2s, box-shadow 0.2s; }
+        .neobrutalism-card:hover { transform: translate(2px, 2px); box-shadow: 4px 4px 0px #111827; }
+        .fade-in-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+        .faq-question.active .arrow-down { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; }
     </style>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B3QHHWSX7P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-B3QHHWSX7P');
-</script>
+    <!-- Google tag (gtag.js) - Ubicación correcta -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3QHHWSX7P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B3QHHWSX7P');
+    </script>
+</head>
 <body class="text-gray-900">
 
     <!-- Header y Navegación -->
     <header class="bg-white sticky top-0 z-50 border-b-4 border-gray-900">
         <nav class="container mx-auto flex items-center justify-between p-4">
-            <a href="#" class="text-2xl font-extrabold text-black">
+            <a href="/" class="text-2xl font-extrabold text-black">
                 EXCELERA
             </a>
             <div class="hidden md:flex items-center space-x-8 font-semibold">
@@ -98,7 +110,8 @@
                         La herramienta de alto valor y rápida implementación para gestionar tus DTEs. Ahorra tiempo y dinero sin salir de la planilla que ya conoces.
                     </p>
                     <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                         <a href="#precios" class="bg-[#ED7D31] text-gray-900 font-bold text-lg py-4 px-8 neobrutalism-button w-full sm:w-auto text-center">
+                         <!-- BOTÓN MODIFICADO: Apunta a Google Forms y rastrea el clic -->
+                         <a href="https://forms.gle/h7iMy7L6wggJPR6N7" target="_blank" onclick="gtag('event', 'click', { 'event_category': 'Demo Download', 'event_label': 'Hero Button' });" class="bg-[#ED7D31] text-gray-900 font-bold text-lg py-4 px-8 neobrutalism-button w-full sm:w-auto text-center">
                             Descargar Prueba de 15 Días
                         </a>
                          <a href="#caracteristicas" class="bg-gray-900 text-white font-bold text-lg py-4 px-8 neobrutalism-button w-full sm:w-auto text-center">
@@ -107,9 +120,9 @@
                     </div>
                 </div>
                 <div class="neobrutalism-box bg-white p-2">
-                    <!-- SVG Ilustrativo -->
-                    <div class="w-full h-80 md:h-96 bg-gray-100 flex items-center justify-center p-4 border-2 border-gray-900">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v8F_iflCjbk?si=KAPmeHn3-yYBOCx5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="w-full h-80 md:h-96 bg-gray-100 flex items-center justify-center p-4 border-2 border-gray-900 aspect-video">
+                        <!-- Video de YouTube corregido y con título para accesibilidad -->
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/v8F_iflCjbk" title="Video Demostrativo de DTE Control by Excelera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -221,7 +234,6 @@
             </div>
         </section>
 
-
         <!-- Sección de Precios -->
         <section id="precios" class="py-16 md:pt-0 md:pb-24 fade-in-on-scroll">
             <div class="text-center">
@@ -327,7 +339,8 @@
                 <p class="mt-4 text-xl text-gray-100 max-w-2xl mx-auto">
                     Únete a los profesionales que ya no pierden el tiempo con tareas repetitivas. Descarga tu prueba gratis y siente la diferencia.
                 </p>
-                <a href="#precios" class="mt-8 inline-block bg-[#ED7D31] text-gray-900 font-bold text-lg py-4 px-8 neobrutalism-button">
+                <!-- BOTÓN MODIFICADO: Apunta a Google Forms y rastrea el clic -->
+                <a href="URL_DE_TU_GOOGLE_FORM" target="_blank" onclick="gtag('event', 'click', { 'event_category': 'Demo Download', 'event_label': 'Final CTA Button' });" class="mt-8 inline-block bg-[#ED7D31] text-gray-900 font-bold text-lg py-4 px-8 neobrutalism-button">
                     Descargar Prueba Gratis por 15 Días
                 </a>
             </div>
@@ -350,7 +363,7 @@
                         <li><a href="#caracteristicas" class="text-gray-400 hover:text-white transition">Características</a></li>
                         <li><a href="#precios" class="text-gray-400 hover:text-white transition">Precios</a></li>
                         <li><a href="#faq" class="text-gray-400 hover:text-white transition">Ayuda</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contacto</a></li>
+                        <li><a href="mailto:contacto@excelera.cl" class="text-gray-400 hover:text-white transition">Contacto</a></li>
                     </ul>
                 </div>
                 <div>
@@ -388,17 +401,20 @@
                 question.addEventListener("click", () => {
                     const answer = question.nextElementSibling;
                     const isActive = question.classList.contains("active");
-
-                    // Cerrar todas las respuestas abiertas
+                    
                     document.querySelectorAll('.faq-question').forEach(q => {
-                        q.classList.remove('active');
-                        q.nextElementSibling.style.maxHeight = null;
+                        if (q !== question) {
+                            q.classList.remove('active');
+                            q.nextElementSibling.style.maxHeight = null;
+                        }
                     });
                     
-                    // Abrir la respuesta actual si no estaba activa
                     if (!isActive) {
                         question.classList.add("active");
                         answer.style.maxHeight = answer.scrollHeight + "px";
+                    } else {
+                        question.classList.remove("active");
+                        answer.style.maxHeight = null;
                     }
                 });
             });
@@ -406,12 +422,4 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
 
