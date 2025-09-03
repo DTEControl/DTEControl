@@ -119,17 +119,20 @@
                     </div>
                 </div>
                 <div class="neobrutalism-box bg-white p-2">
-                    <div class="w-full h-80 md:h-96 bg-gray-100 flex items-center justify-center p-4 border-2 border-gray-900 aspect-video">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/v8F_iflCjbk" title="Video Demostrativo de DTE Control by Excelera" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- Contenedor del video optimizado -->
+                    <div id="youtube-facade" class="relative w-full h-80 md:h-96 bg-gray-100 flex items-center justify-center p-4 border-2 border-gray-900 cursor-pointer bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/v8F_iflCjbk/maxresdefault.jpg');">
+                        <!-- Ícono de Play -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                            <svg class="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8.118v3.764a1 1 0 001.555.832l3.197-1.882a1 1 0 000-1.664l-3.197-1.882z" clip-rule="evenodd"></path></svg>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    <!-- Sección de la imagen del complemento -->
-    <section class="w-full bg-white border-b-4 border-gray-900 p-1 md:p-2">
-        <!-- CAMBIO: Se actualiza la ruta para cargar la imagen localmente desde el repositorio -->
-        <img src="complemento-excelera.png" alt="Captura de pantalla del complemento DTE Control en Excel" class="w-full h-auto">
-    </section>
+        <!-- Sección de la imagen del complemento -->
+        <section class="w-full bg-white border-b-4 border-gray-900 p-1 md:p-2">
+            <img src="complemento-excelera.png" alt="Captura de pantalla del complemento DTE Control en Excel" class="w-full h-auto">
+        </section>
         
         <!-- Sección de Características -->
         <section id="caracteristicas" class="my-16 md:my-24 fade-in-on-scroll bg-white neobrutalism-box rounded-2xl p-8 md:p-12">
@@ -369,6 +372,7 @@
     <!-- JavaScript para animaciones e interactividad -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Animaciones de scroll
             const sections = document.querySelectorAll(".fade-in-on-scroll");
             const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
             const observer = new IntersectionObserver((entries, observer) => {
@@ -381,6 +385,7 @@
             }, observerOptions);
             sections.forEach(section => observer.observe(section));
 
+            // Lógica del acordeón para FAQ
             const faqQuestions = document.querySelectorAll(".faq-question");
             faqQuestions.forEach(question => {
                 question.addEventListener("click", () => {
@@ -403,10 +408,25 @@
                     }
                 });
             });
+
+            // Carga diferida del video de YouTube
+            const videoFacade = document.getElementById("youtube-facade");
+            if (videoFacade) {
+                videoFacade.addEventListener("click", function() {
+                    const iframe = document.createElement("iframe");
+                    iframe.setAttribute("class", "w-full h-full aspect-video");
+                    iframe.setAttribute("src", "https://www.youtube.com/embed/v8F_iflCjbk?autoplay=1");
+                    iframe.setAttribute("title", "Video Demostrativo de DTE Control by Excelera");
+                    iframe.setAttribute("frameborder", "0");
+                    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+                    iframe.setAttribute("allowfullscreen", "");
+                    
+                    // Reemplaza la imagen por el iframe del video
+                    this.parentNode.replaceChild(iframe, this);
+                });
+            }
         });
     </script>
 </body>
 </html>
-
-
 
